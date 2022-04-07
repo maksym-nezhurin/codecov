@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container 1`] = `
+<main
+  className=""
+>
+  <div>
+    I am in the Container
+  </div>
+</main>
+`;
