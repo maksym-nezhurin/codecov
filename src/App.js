@@ -15,6 +15,10 @@ const FOOTER_LINKS_DATA = [
         text: 'Our news'
     },
     {
+        href: '/news2',
+        text: 'Your news'
+    },
+    {
         href: '/contact-us',
         text: 'Contact US'
     }
