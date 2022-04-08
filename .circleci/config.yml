@@ -47,7 +47,7 @@ jobs:
     steps:
       - checkout
       - run:
-          command: bash <(curl -s https://codecov.io/bash) -Z -t $CODECOV_REPOSITORY_UPLOAD_TOKEN -s coverage
+          command: bash <(curl -s https://codecov.io/bash) -Z -t $CODECOV_TOKEN -s coverage
           name: Generate test code coverage
 
 # Invoke jobs via workflows
