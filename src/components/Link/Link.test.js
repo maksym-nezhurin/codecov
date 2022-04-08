@@ -30,11 +30,3 @@ test('Should generate link with # if the property page is not passed', () => {
 
     expect(tree.props.href).toEqual('#')
 });
-
-test('new test casenew link for ', () => {
-    const component = renderer.create(
-        <Link isNew={true}>New link</Link>,
-    );
-
-    expect(component.toJSON()).toMatchSnapshot();
-})

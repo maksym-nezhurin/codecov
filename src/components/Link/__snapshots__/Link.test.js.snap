@@ -2,7 +2,7 @@
 
 exports[`Link changes the class when hovered 1`] = `
 <a
-  className="normal "
+  className=" old-link  normal"
   href="http://www.google.com"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
@@ -13,7 +13,7 @@ exports[`Link changes the class when hovered 1`] = `
 
 exports[`Link changes the class when hovered 2`] = `
 <a
-  className="hovered "
+  className=" old-link  hovered"
   href="http://www.google.com"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
@@ -24,22 +24,11 @@ exports[`Link changes the class when hovered 2`] = `
 
 exports[`Link changes the class when hovered 3`] = `
 <a
-  className="normal "
+  className=" old-link  normal"
   href="http://www.google.com"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
   Google
-</a>
-`;
-
-exports[`new test casenew link for  1`] = `
-<a
-  className="normal  new-link"
-  href="#"
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
->
-  New link
 </a>
 `;
