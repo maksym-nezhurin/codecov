@@ -5,7 +5,7 @@ coverage:
   status:
     project:
       default:
-        threshold: 0%
+        threshold: 10%
 parsers:
   v1:
     include_full_missed_files: true  # default false
