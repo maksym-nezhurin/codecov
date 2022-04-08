@@ -17,18 +17,6 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
-  test:
-    # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
-    # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
-    docker:
-      - image: cimg/base:stable
-    # Add steps to the job
-    # See: https://circleci.com/docs/2.0/configuration-reference/#steps
-    steps:
-      - checkout
-      - run:
-          name: "Test"
-          command: "echo Testing this World!"
   install-dependencies-build-test:
     docker:
       - image: cimg/node:14.17.0
@@ -60,4 +48,4 @@ workflows:
   build-workflow:
     jobs:
       - say-hello
-      - test
+      - install-dependencies-build-test
