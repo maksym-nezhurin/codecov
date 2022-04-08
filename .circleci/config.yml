@@ -41,11 +41,6 @@ jobs:
           environment:
             JEST_JUNIT_OUTPUT_DIR: test-results/jest
           name: Run unit and integration tests
-  generate-code-coverage:
-    docker:
-      - image: cimg/node:14.17.0
-    steps:
-      - checkout
       - run:
           command: bash <(curl -s https://codecov.io/bash) -Z -t $CODECOV_TOKEN -s coverage
           name: Generate test code coverage
@@ -57,4 +52,3 @@ workflows:
     jobs:
       - say-hello
       - install-dependencies-build-test
-      - generate-code-coverage
