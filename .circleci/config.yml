@@ -2,26 +2,9 @@
 # See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
 
-# add your orb below, to be used in integration tests (note: a @dev:alpha
-# release must exist.);
-orbs:
-  codecov: codecov/codecov@3.2.2
-
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
-  say-hello:
-    # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
-    # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
-    docker:
-      - image: cimg/base:stable
-    # Add steps to the job
-    # See: https://circleci.com/docs/2.0/configuration-reference/#steps
-    steps:
-      - checkout
-      - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
   install-dependencies-build-test:
     docker:
       - image: cimg/node:14.17.0
@@ -46,12 +29,16 @@ jobs:
           environment:
             JEST_JUNIT_OUTPUT_DIR: test-results/jest
           name: Run tests
-      - codecov/upload
+      - run:
+          command: bash <(curl -s https://codecov.io/bash) -Z -t $CODECOV_TOKEN -s coverage
+          name: Run test code coverage
+      - run:
+          name: "Current status"
+          command: "echo Process has finished"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
   build-workflow:
     jobs:
-      - say-hello
       - install-dependencies-build-test
