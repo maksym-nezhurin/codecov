@@ -1,0 +1,19 @@
+coverage:
+  range: 50...70 # Below, 50 red, 50-69 yellow, 70+ green
+  round: down
+  precision: 2
+parsers:
+  v1:
+    include_full_missed_files: true  # default false
+ignore:
+  - "bin"
+  - "config"
+  - "db"
+  - "log"
+  - "script"
+  - "spec"
+  - "test"
+  - "tmp"
+  - "vendor"
+comment:
+  layout: "diff, flags, files"
