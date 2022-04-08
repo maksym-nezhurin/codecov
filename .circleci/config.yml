@@ -40,10 +40,10 @@ jobs:
           command: yarn build && yarn test:ci
           environment:
             JEST_JUNIT_OUTPUT_DIR: test-results/jest
-          name: Run unit and integration tests
+          name: Run tests
       - run:
           command: bash <(curl -s https://codecov.io/bash) -Z -t $CODECOV_TOKEN -s coverage
-          name: Generate test code coverage
+          name: Run test code coverage
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
