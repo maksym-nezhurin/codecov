@@ -5,8 +5,13 @@ const STATUS = {
     NORMAL: 'normal',
 };
 
-const Link = ({page, classNames, isNew = false, children}) => {
+const Link = ({page, classNames: classes, isNew = false, isOld = true, children}) => {
     const [status, setStatus] = useState(STATUS.NORMAL);
+    const classNames = [
+        classes,
+        isOld ? 'old-link' : '',
+        isNew ? 'new-link' : '',
+    ].join(' ');
 
     const onMouseEnter = () => {
         setStatus(STATUS.HOVERED);
@@ -18,7 +23,7 @@ const Link = ({page, classNames, isNew = false, children}) => {
 
     return (
         <a
-            className={`${classNames ? classNames + ' ' : ''}${status} ${isNew ? ' new-link' : ''}`}
+            className={`${classNames + " "}${status}`}
             href={page || '#'}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}

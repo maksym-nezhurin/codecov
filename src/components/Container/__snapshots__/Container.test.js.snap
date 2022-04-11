@@ -4,8 +4,6 @@ exports[`Container 1`] = `
 <main
   className=""
 >
-  <div>
-    I am in the Container
-  </div>
+  Hello world
 </main>
 `;

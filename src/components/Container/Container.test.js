@@ -4,9 +4,7 @@ import { Container } from './Container';
 
 test('Container', () => {
     const component = renderer.create(
-        <Container>
-            <div>I am in the Container</div>
-        </Container>,
+        <Container>Hello world</Container>,
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();

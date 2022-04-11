@@ -6,7 +6,7 @@ exports[`Footer structure 1`] = `
 >
   <ul>
     <a
-      className="App-link normal "
+      className="App-link old-link  normal"
       href="google.com"
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
@@ -14,7 +14,7 @@ exports[`Footer structure 1`] = `
       Google
     </a>
     <a
-      className="App-link normal "
+      className="App-link old-link  normal"
       href="facebook.com"
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
@@ -22,7 +22,7 @@ exports[`Footer structure 1`] = `
       Facebook
     </a>
     <a
-      className="App-link normal "
+      className="App-link old-link  normal"
       href="/news"
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
