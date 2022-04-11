@@ -5,19 +5,11 @@ coverage:
   status:
     project:
       default:
-        threshold: 10%
+        threshold: 1%
 parsers:
   v1:
     include_full_missed_files: true  # default false
 ignore:
-  - "bin"
-  - "config"
-  - "db"
-  - "log"
-  - "script"
-  - "spec"
-  - "test"
-  - "tmp"
-  - "vendor"
+  - "scripts"
 comment:
   layout: "diff, flags, files"
