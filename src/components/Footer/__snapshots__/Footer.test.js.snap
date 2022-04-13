@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Footer structure 1`] = `
-<main
-  className=""
+<footer
+  className=" footer"
 >
   <ul>
     <a
@@ -30,5 +30,11 @@ exports[`Footer structure 1`] = `
       Our news
     </a>
   </ul>
-</main>
+</footer>
+`;
+
+exports[`footer classname 1`] = `
+<footer
+  className="testClass footer"
+/>
 `;

@@ -18,3 +18,10 @@ test('Footer structure', () => {
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
 });
+
+test('footer classname', () => {
+   const component = renderer.create(<Footer classNames='testClass' />);
+
+    let tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+});
