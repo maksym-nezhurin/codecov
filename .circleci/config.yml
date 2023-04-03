@@ -2,9 +2,26 @@
 # See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
 
+parameters:
+  pr_number:
+    type: string
+    default: "test"
+  only_run_delete_review_app:
+    type: boolean
+    default: false
+
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
+  delete_review_app_deploy:
+    environment:
+      RAIN: << pipeline.parameters.pr_number >>
+      POKEMON: $POKEMON
+    steps:
+      - checkout
+      - run: echo "I am testprnumber var $RAIN and $pr_number and << pipeline.parameters.pr_number >>"
+      - run: echo "Thank you $POKEMON pokemon"
+
   install-dependencies-build-test:
     docker:
       - image: cimg/node:14.17.0
@@ -42,3 +59,8 @@ workflows:
   build-workflow:
     jobs:
       - install-dependencies-build-test
+  delete_review_app_deploy:
+    jobs:
+      - delete_review_app_deploy:
+          context:
+            - org-global
