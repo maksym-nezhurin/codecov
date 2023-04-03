@@ -7,7 +7,7 @@ version: 2.1
 jobs:
   delete_review_app_deploy:
     docker:
-      - image: cimg/node:14.17.0
+      - image: cimg/node:14.16.0
     environment:
       RAIN: << pipeline.parameters.pr_number >>
       POKEMON: $POKEMON
