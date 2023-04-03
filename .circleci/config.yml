@@ -6,6 +6,8 @@ version: 2.1
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
   delete_review_app_deploy:
+    docker:
+      - image: cimg/node:14.17.0
     environment:
       RAIN: << pipeline.parameters.pr_number >>
       POKEMON: $POKEMON
