@@ -13,7 +13,7 @@ jobs:
       POKEMON: $POKEMON
     steps:
       - checkout
-      - run: echo "I am testprnumber var $RAIN and $pr_number and << pipeline.parameters.pr_number >>"
+      - run: echo "I am testprnumber2 var $RAIN and $pr_number and << pipeline.parameters.pr_number >>"
       - run: echo "Thank you $POKEMON pokemon"
 
   install-dependencies-build-test:
